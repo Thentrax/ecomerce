@@ -1,0 +1,6 @@
+.page{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #e6e6e6;
+}

@@ -1,0 +1,16 @@
+.content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 240px));
+    gap: 8px;
+    color: #321A4B;
+    background-color: #e6e6e6;
+    padding: 16px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    width: 70%;
+}

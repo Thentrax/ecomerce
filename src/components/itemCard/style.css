@@ -1,0 +1,50 @@
+.card{
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.card-title{
+    font-size: 16px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    margin: 0;
+}
+
+.card-original-price{
+    color: #ababab;
+    text-decoration: line-through;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.card-price{
+    color: #5EB435;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+}
+
+.card-button{
+    width: 100%;
+    margin-top: 4px;
+    color: #fff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    border: 1px solid #5EB435;
+    background-color: #5EB435;
+
+}
+
+.card-button:hover{
+    background-color: #fff;
+    color: #5EB435;
+
+    transition: 200ms;
+}
