@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+
+    font-family: Montserrat, sans-serif;
+    color: #e6e6e6;
+}
+
+.navbar-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    padding-bottom: 8px;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    cursor: pointer;
+
+    &:hover{
+        color: #fff;
+        transition: 300ms;
+    }
+}
+
+.w50{
+    width: 50%;
+}
+
+.main-row{
+    background: #5EB435;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-searchbar{
+    width: 60%;
+}
+
+.search-input{
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.navbar-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    & :is(svg) {
+        cursor: pointer;
+
+        &:hover{
+            color: #fff;
+            transition: 300ms;
+        }    }
+
+
+}
+
+.secondary-row{
+    background: #321A4B;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.selectable{
+    cursor: pointer;
+
+    & :hover{
+        color: #5EB435;
+        transition: 300ms;
+    }
+}
