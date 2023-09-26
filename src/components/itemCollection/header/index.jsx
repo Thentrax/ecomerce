@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './style.css';
-import { Percent, Timer } from "@phosphor-icons/react";
+import {Percent, ShoppingBag, Timer} from "@phosphor-icons/react";
 
 function ItemCollectionHeader({title, hasOffer, endingDate}) {
     const [countdownDays, setCountdownDays] = useState(0);
@@ -34,7 +34,8 @@ function ItemCollectionHeader({title, hasOffer, endingDate}) {
     return (<div className="header-wrapper">
             <div className="header-content">
                 <h1 className="div-center">
-                <Percent width={30} height={30}/> {title}
+                    {hasOffer ? <Percent width={30} height={30}/> : <ShoppingBag width={30} height={30}/>}
+                    {title}
                 </h1>
                 {hasOffer && <h3 className="div-center">
                     <Timer width={30} height={30}/> Ofertas acabam em:

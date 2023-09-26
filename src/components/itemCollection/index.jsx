@@ -41,12 +41,12 @@ const itens =
         }
     ]
 
-function ItemCollection() {
+function ItemCollection({hasOffer, title}) {
     return (
         <div>
             <ItemCollectionHeader
-                title="Ofertas Super Sônicas"
-                hasOffer={true}
+                title={title}
+                hasOffer={hasOffer}
                 endingDate="September 26, 2023 23:59:59"
             />
             <ItemCollectionContent
