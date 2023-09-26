@@ -47,7 +47,7 @@
 }
 
 .navbar-searchbar{
-    width: 60%;
+    width: 50%;
 }
 
 .search-input{
@@ -64,6 +64,7 @@
 
     & :is(svg) {
         cursor: pointer;
+        color: #e6e6e6;
 
         &:hover{
             color: #fff;
