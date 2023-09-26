@@ -51,7 +51,7 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-searchbar">
                         <Input.Search
-                            rootClassName={"search-input"}
+                            rootClassName={"search-input"} placeholder="Busque aqui"
                         />
                     </div>
                     <div className={"navbar-icons"}>
