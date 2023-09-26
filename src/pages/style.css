@@ -3,4 +3,5 @@
     flex-direction: column;
     background-color: #fff;
     color: #e6e6e6;
+    min-height: caLc(100vh - 145px);
 }

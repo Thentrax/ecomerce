@@ -29,6 +29,10 @@
     margin: 0;
     cursor: pointer;
 
+    & p{
+        margin: 24px 0;
+    }
+
     &:hover{
         color: #fff;
         transition: 300ms;
@@ -40,6 +44,7 @@
 }
 
 .main-row{
+    padding: 8px 0;
     background: #5EB435;
     width: 100%;
     display: flex;
@@ -88,10 +93,4 @@
         color: #5EB435;
         transition: 300ms;
     }
-}
-
-.div-center, p {
-    display: flex;
-    align-items: center;
-    gap: 6px;
 }

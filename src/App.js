@@ -1,6 +1,7 @@
-import Navbar from "./components/navbar";
 import './index.css'
+import Navbar from "./components/navbar";
 import CurrentPage from "./pages";
+import Footer from "./components/footer";
 
 function App() {
     return (
@@ -8,6 +9,7 @@ function App() {
         <div className="App">
             <Navbar/>
             <CurrentPage/>
+            <Footer/>
         </div>
 
     );

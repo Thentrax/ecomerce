@@ -1,0 +1,154 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+
+    font-family: Montserrat, sans-serif;
+    color: #e6e6e6;
+}
+
+.footer-row {
+    padding: 8px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+}
+
+.footer-form {
+    width: 100%;
+}
+
+.title-footer {
+    margin: 0;
+    cursor: default;
+
+    & p {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    & span {
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    &:hover {
+        color: #fff;
+        transition: 300ms;
+    }
+}
+
+.w50 {
+    width: 70%;
+}
+
+.main-row-footer {
+    padding: 16px 0;
+    background: #321A4B;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    & :is(svg) {
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+            transition: 300ms;
+        }
+    }
+
+
+}
+
+.secondary-row-footer {
+    background: #3c215e;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-send {
+    background-color: #5EB435;
+    border-radius: 4px;
+    border: #5EB435 1px solid;
+    color: #fff;
+    padding: 8px 16px;
+
+    &:hover {
+        background-color: #3c215e;
+        border: #fff 1px solid;
+        transition: 200ms;
+    }
+}
+
+.footer-item-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & h1 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+    }
+}
+
+.footer-item-column-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 300;
+
+    & p {
+        margin: 0;
+        cursor: pointer;
+
+        &:hover {
+            color: #5EB435;
+            transition: 300ms;
+        }
+    }
+
+    & span {
+        max-width: 300px;
+        cursor: default;
+    }
+}
+
+.footer-item-row-child {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+
+    & a {
+        color: #e6e6e6;
+
+        & svg {
+            cursor: pointer;
+
+            &:hover {
+                color: #5EB435;
+                transition: 300ms;
+            }
+        }
+    }
+
+}
