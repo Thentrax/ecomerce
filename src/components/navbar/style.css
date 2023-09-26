@@ -88,3 +88,9 @@
         transition: 300ms;
     }
 }
+
+.div-center, p {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}

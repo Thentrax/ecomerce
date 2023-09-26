@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import {Dropdown, Input, Space} from "antd";
-import {Heart, ShoppingCart, UserCircle} from "@phosphor-icons/react";
+import {Heart, ShoppingCart, UserCircle, Mountains, Coins, Toolbox, Headset, Cpu, MouseSimple, DesktopTower, Laptop} from "@phosphor-icons/react";
 import {DownOutlined} from "@ant-design/icons";
 
 const items = [
@@ -9,7 +9,7 @@ const items = [
         key: '1',
         label: (
             <p>
-                Hardware
+               <Cpu width={25} height={25}/> Hardware
             </p>
         ),
     },
@@ -17,7 +17,7 @@ const items = [
         key: '2',
         label: (
             <p>
-                Periféricos
+                <MouseSimple width={25} height={25}/> Periféricos
             </p>
         ),
     },
@@ -25,7 +25,7 @@ const items = [
         key: '3',
         label: (
             <p>
-                Computadores
+               <DesktopTower width={25} height={25}/> Computadores
             </p>
         ),
     },
@@ -33,7 +33,7 @@ const items = [
         key: '4',
         label: (
             <p>
-                Notebooks
+               <Laptop width={25} height={25}/> Notebooks
             </p>
         ),
     },
@@ -47,7 +47,7 @@ const Navbar = () => {
                 <div className="navbar-row w50">
 
                     <div className="title">
-                        <p>GreenHill Store</p>
+                        <p className="div-center"><Mountains width={32} height={32}/> GreenHill Store </p>
                     </div>
                     <div className="navbar-searchbar">
                         <Input.Search
@@ -80,13 +80,13 @@ const Navbar = () => {
                         </Dropdown>
                     </div>
                     <div className="selectable">
-                        <p>Ofertas</p>
+                        <p className="div-center"><Coins width={24} height={24}/> Ofertas</p>
                     </div>
                     <div className="selectable">
-                        <p>Serviços</p>
+                        <p className="div-center"><Toolbox width={24} height={24}/> Serviços</p>
                     </div>
                     <div className="selectable">
-                        <p>Suporte</p>
+                        <p className="div-center"><Headset width={24} height={24}/> Suporte</p>
                     </div>
                 </div>
             </div>

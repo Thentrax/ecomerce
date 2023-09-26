@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './style.css';
+import { Percent, Timer } from "@phosphor-icons/react";
 
 function ItemCollectionHeader({title, hasOffer, endingDate}) {
     const [countdownDays, setCountdownDays] = useState(0);
@@ -32,11 +33,11 @@ function ItemCollectionHeader({title, hasOffer, endingDate}) {
 
     return (<div className="header-wrapper">
             <div className="header-content">
-                <h1>
-                    {title}
+                <h1 className="div-center">
+                <Percent width={30} height={30}/> {title}
                 </h1>
-                {hasOffer && <h3>
-                    Ofertas acabam em:
+                {hasOffer && <h3 className="div-center">
+                    <Timer width={30} height={30}/> Ofertas acabam em:
                     {' '}
                     {countdownDays}D {countdownHours}H {countdownMinutes}M {countdownSeconds}S
                 </h3>}
