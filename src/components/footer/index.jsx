@@ -9,7 +9,10 @@ import {
     TwitterLogo,
     User,
     WhatsappLogo,
-    YoutubeLogo
+    YoutubeLogo,
+    WheelchairMotion,
+    Buildings,
+    Headset
 } from "@phosphor-icons/react";
 
 const Footer = () => {
@@ -60,7 +63,7 @@ const Footer = () => {
             <div className="secondary-row-footer">
                 <div className="footer-row w50" style={{alignItems: "start"}}>
                     <div className="footer-item-column">
-                        <h1>Institucional</h1>
+                        <h1><Buildings width={20} height={20}/> Institucional</h1>
                         <div className="footer-item-column-child">
                             <p>Quem somos</p>
                             <p>Política de privacidade</p>
@@ -70,7 +73,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="footer-item-column">
-                        <h1>Acessibilidade</h1>
+                        <h1><WheelchairMotion width={20} height={20}/> Acessibilidade</h1>
                         <div className="footer-item-column-child">
                             <p>Assesibilidade</p>
                         </div>
@@ -103,7 +106,7 @@ const Footer = () => {
                     </div>
                     <div className="footer-item-column">
                         <div className="footer-item-column-child">
-                            <h1>Atendimento</h1>
+                            <h1><Headset width={20} height={20}/> Atendimento</h1>
                             <span>
                                 Horário de atendimento:
                                 08:00 às 20:00 -
@@ -111,8 +114,8 @@ const Footer = () => {
                                 horário de Brasília
                                 (Exceto domingo e feriados)
                             </span>
-                            <h1>Email</h1>
-                            <span>faleconosco@grennhillstore.com</span>
+                            <h1><Envelope width={20} height={20}/> Email</h1>
+                            <span>faleconosco@greenhillstore.com</span>
                         </div>
                     </div>
                 </div>

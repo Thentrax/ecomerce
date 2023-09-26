@@ -1,7 +1,21 @@
 import React from "react";
 import "./style.css";
 import {Dropdown, Input, Space, Badge} from "antd";
-import {Heart, ShoppingCart, UserCircle, Mountains, Coins, Toolbox, Headset, Cpu, MouseSimple, DesktopTower, Laptop, Bell, CaretDown} from "@phosphor-icons/react";
+import {
+    Heart,
+    ShoppingCart,
+    UserCircle,
+    Mountains,
+    Coins,
+    Toolbox,
+    Headset,
+    Cpu,
+    MouseSimple,
+    DesktopTower,
+    Laptop,
+    Bell,
+    CaretDown
+} from "@phosphor-icons/react";
 
 const items = [
     {
