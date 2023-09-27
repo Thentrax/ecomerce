@@ -47,7 +47,7 @@ function ItemCollection({hasOffer, title}) {
             <ItemCollectionHeader
                 title={title}
                 hasOffer={hasOffer}
-                endingDate="September 26, 2023 23:59:59"
+                endingDate="September 30, 2023 23:59:59"
             />
             <ItemCollectionContent
                 itemCollection={itens}
