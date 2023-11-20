@@ -9,8 +9,9 @@ function ItemCollectionContent({itemCollection}) {
             <div className="content-list">
                 {itemCollection.map((item) => (
                     <ItemCard
+                        id={item.id}
                         title={item.title}
-                        originalPrice={item.originalPrice}
+                        salePrice={item.salePrice}
                         price={item.price}
                         hasOffer={item.hasOffer}
                         imageLink={item.imageLink}

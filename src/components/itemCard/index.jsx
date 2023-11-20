@@ -3,30 +3,40 @@ import {Card} from "antd";
 import './style.css';
 import {ShoppingCart} from "@phosphor-icons/react";
 
-function ItemCard({title, originalPrice, price, imageLink}) {
+function ItemCard({id, title, price, salePrice, hasOffer, imageLink}) {
     return (
-        <Card
-            hoverable
-            cover={<img alt="rtx3060"
-                        src={imageLink}/>}
-            className='card'
+        <a
+            href={`/product/${id}`}
+            style={{textDecoration: "none", color: "black"}}
         >
-            <h3 className='card-title'>
-                {title}
-            </h3>
-            <p className='card-original-price'>
-                {originalPrice}
-            </p>
-            <p className='card-price'>
-                {price}
-            </p>
-            <div
-                className='card-button'
+            <Card
+                hoverable
+                cover={<img alt={title} src={imageLink}/>}
+                className='card'
             >
-                <ShoppingCart/>
-                Comprar
-            </div>
-        </Card>
+                <h3 className='card-title'>
+                    {title}
+                </h3>
+                { hasOffer ? (
+                    <>
+                        <p className='card-original-price'>
+                            {price}
+                        </p>
+                        <p className='card-price'>
+                            {salePrice}
+                        </p>
+                    </>
+                ) : (
+                    <p className='card-price'>
+                        {price}
+                    </p>
+                )}
+                <div className='card-button'>
+                    <ShoppingCart/>
+                    Comprar
+                </div>
+            </Card>
+        </a>
 
     );
 }

@@ -1,0 +1,130 @@
+.product-container{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    color: #321A4B;
+    text-align: justify;
+}
+
+.product-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #5EB435;
+    color: #e6e6e6;
+    padding: 16px;
+
+    & > h2{
+        margin: 0;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+.product-body{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    background-color: #e6e6e6;
+}
+
+.product-image{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+
+    & > img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.product-details{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+}
+
+.product-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.product-description{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & > h2{
+        margin: 0;
+        font-size: 24px;
+        font-weight: 700;
+        color: #5EB435;
+    }
+
+    & > h4{
+        margin: 0;
+        font-size: 18px;
+        font-weight: 700;
+        color: #5EB435;
+    }
+
+    & > p{
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+        color: #321A4B;
+    }
+
+    & > h6{
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+        color: #321A4B;
+    }
+}
+
+.purchase-button{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+
+    & > button{
+        width: 100%;
+        height: 100%;
+        padding: 16px;
+        border: none;
+        border-radius: 8px;
+        background-color: #5EB435;
+        color: #e6e6e6;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+            background-color: #4d8c2b;
+            transition: 200ms ease-in-out;
+        }
+    }
+}
