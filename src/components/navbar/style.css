@@ -28,6 +28,8 @@
     font-weight: 700;
     margin: 0;
     cursor: pointer;
+    color: #e6e6e6;
+    text-decoration: none;
 
     & p{
         margin: 24px 0;
@@ -88,6 +90,8 @@
 
 .selectable{
     cursor: pointer;
+    color: #e6e6e6;
+    text-decoration: none;
 
     & :hover{
         color: #5EB435;

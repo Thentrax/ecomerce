@@ -15,7 +15,7 @@ function ItemCollectionHeader({title, hasOffer, endingDate}) {
             }, 1000);
             return () => clearInterval(interval);
         }
-    }, );
+    },);
 
     const timerCountdown = () => {
         const countdownDate = new Date(endingDate).getTime();
@@ -29,6 +29,16 @@ function ItemCollectionHeader({title, hasOffer, endingDate}) {
         setCountdownHours(hours);
         setCountdownMinutes(minutes);
         setCountdownSeconds(seconds);
+        if (distance < 0) {
+            resetTimer();
+        }
+    }
+
+    const resetTimer = () => {
+        setCountdownDays(null);
+        setCountdownHours(null);
+        setCountdownMinutes(null);
+        setCountdownSeconds(null);
     }
 
     return (<div className="header-wrapper">
@@ -37,12 +47,13 @@ function ItemCollectionHeader({title, hasOffer, endingDate}) {
                     {hasOffer ? <Percent width={30} height={30}/> : <ShoppingBag width={30} height={30}/>}
                     {title}
                 </h1>
-                {hasOffer && <h3 className="div-center">
-                    <Timer width={30} height={30}/> Ofertas acabam em:
-                    {' '}
-                    {countdownDays}D {countdownHours}H {countdownMinutes}M {countdownSeconds}S
-                </h3>}
-
+                {hasOffer && countdownDays && countdownHours && countdownMinutes && countdownSeconds && (
+                    <h3 className="div-center">
+                        <Timer width={30} height={30}/> Ofertas acabam em:
+                        {' '}
+                        {countdownDays}D {countdownHours}H {countdownMinutes}M {countdownSeconds}S
+                    </h3>
+                )}
             </div>
         </div>
 

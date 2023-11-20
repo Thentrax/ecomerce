@@ -29,11 +29,16 @@ const Footer = () => {
                     <div className="footer-form">
                         <Form
                             layout="inline"
-                            style={{width: '100%', height: '100%'}}
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                display: 'flex',
+                                justifyContent: 'flex-end',
+                            }}
                         >
                             <Form.Item
                                 name="name"
-                                style={{width: '40%', height: '100%'}}
+                                style={{width: '40%'}}
                             >
                                 <Input
                                     placeholder="Seu nome"
@@ -41,7 +46,7 @@ const Footer = () => {
                                 />
                             </Form.Item>
                             <Form.Item
-                                style={{width: '40%', height: '100%'}}
+                                style={{width: '40%'}}
                                 name="email"
                             >
                                 <Input
@@ -50,9 +55,9 @@ const Footer = () => {
                                 />
                             </Form.Item>
                             <Form.Item
-                                style={{width: '16%', height: '100%'}}
+                                style={{width: '10%'}}
                             >
-                                <button className="newsletter-send">
+                                <button className="newsletter-send" style={{width: '100%'}}>
                                     Enviar
                                 </button>
                             </Form.Item>
@@ -97,10 +102,10 @@ const Footer = () => {
                                 <TwitterLogo width={25} height={25}/>
                             </a>
                             <a href="https://www.youtube.com">
-                            <YoutubeLogo width={25} height={25}/>
+                                <YoutubeLogo width={25} height={25}/>
                             </a>
                             <a href="https://www.tiktok.com">
-                            <TiktokLogo width={25} height={25}/>
+                                <TiktokLogo width={25} height={25}/>
                             </a>
                         </div>
                     </div>

@@ -1,8 +1,9 @@
 import ItemCollection from "../../components/itemCollection";
 
-function MainPage() {
+function ServicesPage() {
     return (
         <>
+            <h1>Services Page</h1>
             <ItemCollection
                 hasOffer={true}
                 title={"Ofertas Super Sônicas"}
@@ -15,4 +16,4 @@ function MainPage() {
     );
 }
 
-export default MainPage;
+export default ServicesPage;

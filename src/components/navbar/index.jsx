@@ -6,7 +6,6 @@ import {
     ShoppingCart,
     UserCircle,
     Mountains,
-    Coins,
     Toolbox,
     Headset,
     Cpu,
@@ -59,9 +58,9 @@ const Navbar = () => {
             <div className="main-row">
                 <div className="navbar-row w50">
 
-                    <div className="title">
+                    <a href={"/"} className="title">
                         <p className="div-center"><Mountains width={32} height={32}/> GreenHill Store </p>
-                    </div>
+                    </a>
                     <div className="navbar-searchbar">
                         <Input.Search
                             rootClassName={"search-input"} placeholder="Busque aqui"
@@ -92,15 +91,12 @@ const Navbar = () => {
                             </a>
                         </Dropdown>
                     </div>
-                    <div className="selectable">
-                        <p className="div-center">Ofertas <Coins width={24} height={24}/></p>
-                    </div>
-                    <div className="selectable">
+                    <a href={"/services"} className="selectable">
                         <p className="div-center">Serviços <Toolbox width={24} height={24}/></p>
-                    </div>
-                    <div className="selectable">
+                    </a>
+                    <a href={"/support"} className="selectable">
                         <p className="div-center">Suporte <Headset width={24} height={24}/></p>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

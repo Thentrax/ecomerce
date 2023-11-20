@@ -1,7 +1,7 @@
 import './index.css'
 import Navbar from "./components/navbar";
-import CurrentPage from "./pages";
 import Footer from "./components/footer";
+import CurrentPage from "./pages";
 
 function App() {
     return (

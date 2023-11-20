@@ -1,15 +1,14 @@
-import MainPage from "./main";
 import './style.css';
+import Router from "./routes";
 
 function CurrentPage() {
     return (
 
         <div className="page">
-            <MainPage />
+            <Router />
         </div>
 
     );
 }
 
 export default CurrentPage;
-
