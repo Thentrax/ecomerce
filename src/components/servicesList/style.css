@@ -1,0 +1,23 @@
+.items-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    color: #321A4B;
+}
+
+.services-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    padding: 16px;
+    background-color: #5EB435;
+
+    & > h1{
+        margin: 0;
+        color: #e6e6e6;
+    }
+}
