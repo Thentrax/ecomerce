@@ -30,3 +30,29 @@
         transition: 200ms ease-in-out;
     }
 }
+
+.table-actions{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+
+    .edit{
+        color: #321A4B;
+        cursor: pointer;
+        &:hover{
+            color: #3c215e;
+            transition: 200ms ease-in-out;
+        }
+    }
+
+    .delete{
+        color: #B43535;
+        cursor: pointer;
+        &:hover{
+            color: #c23c3c;
+            transition: 200ms ease-in-out;
+        }
+    }
+}

@@ -3,7 +3,7 @@ import "./style.css";
 import {ShoppingCart} from "@phosphor-icons/react";
 import {formatToMonetary} from "../../../services/toMonetary";
 
-function ServiceRow({title, price, imageLink, description}) {
+function ServiceRow({title, price, imageLink, description, salePrice, hasOffer}) {
     return (
         <div className="row">
             <div className="image-wrapper">
@@ -13,9 +13,20 @@ function ServiceRow({title, price, imageLink, description}) {
                 <div className="service-title">
                     {title}
                 </div>
-                <div className="service-price">
-                    {formatToMonetary(price)}
-                </div>
+                {hasOffer ? (
+                    <>
+                        <div className="service-sale">
+                            {formatToMonetary(price)}
+                        </div>
+                        <div className="service-price">
+                            {formatToMonetary(salePrice)}
+                        </div>
+                    </>
+                ) : (
+                    <div className="service-price">
+                        {formatToMonetary(price)}
+                    </div>
+                )}
                 <div className="service-description">
                     {description}
                 </div>

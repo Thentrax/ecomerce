@@ -3,15 +3,13 @@ import {Col, Input, message, Modal, Row, Select} from "antd";
 import {ApiInstance} from "../../services/api";
 import "./style.css";
 
-function ProductModal({isOpen, setIsOpen, action, selectedProduct, fetchProducts}) {
+function ServiceModal({isOpen, setIsOpen, action, selectedService, fetchServices}) {
     const [title, setTitle] = useState('');
     const [price, setPrice] = useState('');
     const [salePrice, setSalePrice] = useState('');
     const [hasOffer, setHasOffer] = useState(false);
     const [description, setDescription] = useState('');
     const [imageLink, setImageLink] = useState('');
-    const [ammount, setAmmount] = useState('');
-    const [type, setType] = useState('');
 
     useEffect(() => {
         if (action === 'edit') {
@@ -21,14 +19,12 @@ function ProductModal({isOpen, setIsOpen, action, selectedProduct, fetchProducts
         }
     }, [isOpen]);
     const fillFields = () => {
-        setTitle(selectedProduct.title);
-        setPrice(selectedProduct.price);
-        setSalePrice(selectedProduct.salePrice);
-        setHasOffer(selectedProduct.hasOffer);
-        setDescription(selectedProduct.description);
-        setImageLink(selectedProduct.imageLink);
-        setAmmount(selectedProduct.ammount);
-        setType(selectedProduct.type);
+        setTitle(selectedService.title);
+        setPrice(selectedService.price);
+        setSalePrice(selectedService.salePrice);
+        setHasOffer(selectedService.hasOffer);
+        setDescription(selectedService.description);
+        setImageLink(selectedService.imageLink);
     };
     const clearFields = () => {
         setTitle('');
@@ -37,26 +33,21 @@ function ProductModal({isOpen, setIsOpen, action, selectedProduct, fetchProducts
         setHasOffer(false);
         setDescription('');
         setImageLink('');
-        setAmmount('');
-        setType('');
     };
     const buildBody = () => {
         const formatedPrice = parseFloat(price);
         const formatedSalePrice = parseFloat(salePrice);
-        const formatedAmmount = parseInt(ammount);
         let body;
 
         if (action === 'edit') {
             body = {
-                id: selectedProduct.id,
+                id: selectedService.id,
                 title,
                 price: formatedPrice,
                 salePrice: formatedSalePrice,
                 hasOffer,
                 description,
                 imageLink,
-                ammount: formatedAmmount,
-                type,
             }
         } else {
             body = {
@@ -66,8 +57,6 @@ function ProductModal({isOpen, setIsOpen, action, selectedProduct, fetchProducts
                 hasOffer,
                 description,
                 imageLink,
-                ammount: formatedAmmount,
-                type,
             }
         }
         return body;
@@ -75,10 +64,10 @@ function ProductModal({isOpen, setIsOpen, action, selectedProduct, fetchProducts
     const handleCreate = async () => {
         if (validateFields()) {
             try {
-                await ApiInstance.post('/Product', buildBody());
+                await ApiInstance.post('/Service', buildBody());
                 setIsOpen(false);
                 clearFields();
-                fetchProducts();
+                fetchServices();
             } catch (error) {
                 console.log(error);
                 message.error('Houve algum erro ao criar o produto')
@@ -91,10 +80,10 @@ function ProductModal({isOpen, setIsOpen, action, selectedProduct, fetchProducts
     const handleEdit = async () => {
         if (validateFields()) {
             try {
-                await ApiInstance.put(`/Product/${selectedProduct.id}`, buildBody());
+                await ApiInstance.put(`/Service/${selectedService.id}`, buildBody());
                 setIsOpen(false);
                 clearFields();
-                fetchProducts();
+                fetchServices();
             } catch (error) {
                 console.log(error);
                 message.error('Houve algum erro ao editar o produto')
@@ -105,7 +94,7 @@ function ProductModal({isOpen, setIsOpen, action, selectedProduct, fetchProducts
     }
 
     const validateFields = () => {
-        return title && price && description && imageLink && ammount && type;
+        return title && price && description && imageLink;
     };
 
     const onSubmit = () => {
@@ -118,7 +107,7 @@ function ProductModal({isOpen, setIsOpen, action, selectedProduct, fetchProducts
 
     return (
         <Modal
-            title={action === 'create' ? 'Criar produto' : 'Editar produto'}
+            title={action === 'create' ? 'Criar serviço' : 'Editar serviço'}
             open={isOpen}
             onCancel={() => {
                 setIsOpen(false)
@@ -183,33 +172,6 @@ function ProductModal({isOpen, setIsOpen, action, selectedProduct, fetchProducts
                         </Select>
                     </Col>
                     <Col span={11}>
-                        <label>Tipo</label>
-                        <Select
-                            placeholder="Tipo"
-                            value={type}
-                            onChange={(e) => setType(e)}
-                            required
-                            style={{width: "100%"}}
-                        >
-                            <Select.Option value="hardware">Hardware</Select.Option>
-                            <Select.Option value="perifericos">Perifericos</Select.Option>
-                            <Select.Option value="computadores">Computadores</Select.Option>
-                            <Select.Option value="notebooks">Notebooks</Select.Option>
-                        </Select>
-                    </Col>
-                </Row>
-                <Row style={{justifyContent: "space-between"}}>
-                    <Col span={11}>
-                        <label>Quantidade no Estoque</label>
-                        <Input
-                            placeholder="Quantidade"
-                            value={ammount}
-                            onChange={(e) => setAmmount(e.target.value)}
-                            type="number"
-                            required
-                        />
-                    </Col>
-                    <Col span={11}>
                         <label>Link da Imagem</label>
                         <Input
                             placeholder="Link da Imagem"
@@ -239,5 +201,5 @@ function ProductModal({isOpen, setIsOpen, action, selectedProduct, fetchProducts
     );
 }
 
-export default ProductModal;
+export default ServiceModal;
 

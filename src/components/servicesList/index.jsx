@@ -31,6 +31,8 @@ function StoreServicesList() {
                         price={item.price}
                         imageLink={item.imageLink}
                         description={item.description}
+                        salePrice={item.salePrice}
+                        hasOffer={item.hasOffer}
                     />
                 ))
             }

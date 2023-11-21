@@ -37,6 +37,13 @@ img{
     font-weight: 700;
 }
 
+.service-sale{
+    font-size: 16px;
+    font-weight: 400;
+    color: #321A4B;
+    text-decoration: line-through;
+}
+
 .service-price{
     font-size: 18px;
     font-weight: 500;
