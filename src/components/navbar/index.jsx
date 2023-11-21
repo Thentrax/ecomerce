@@ -61,11 +61,7 @@ const Navbar = () => {
                     <a href={"/"} className="title">
                         <p className="div-center"><Mountains width={32} height={32}/> GreenHill Store </p>
                     </a>
-                    <div className="navbar-searchbar">
-                        <Input.Search
-                            rootClassName={"search-input"} placeholder="Busque aqui"
-                        />
-                    </div>
+                    <div className="navbar-searchbar"/>
                     <div className={"navbar-icons"}>
                         <Heart width={32} height={32}/>
                         <ShoppingCart width={32} height={32}/>

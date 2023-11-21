@@ -9,7 +9,7 @@ function MainPage() {
             />
             <ItemCollection
                 hasOffer={false}
-                title={"Para você"}
+                title={"Todos os produtos"}
             />
         </>
     );

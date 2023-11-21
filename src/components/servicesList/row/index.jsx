@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import {ShoppingCart} from "@phosphor-icons/react";
+import {formatToMonetary} from "../../../services/toMonetary";
 
 function ServiceRow({title, price, imageLink, description}) {
     return (
@@ -13,7 +14,7 @@ function ServiceRow({title, price, imageLink, description}) {
                     {title}
                 </div>
                 <div className="service-price">
-                    {price}
+                    {formatToMonetary(price)}
                 </div>
                 <div className="service-description">
                     {description}

@@ -1,0 +1,32 @@
+.table-containter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.container-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.add-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 8px;
+    border: 1px solid #5EB435;
+    background-color: #5EB435;
+    color: #fff;
+    cursor: pointer;
+    &:hover{
+        background-color: #4A8C2D;
+        transition: 200ms ease-in-out;
+    }
+}

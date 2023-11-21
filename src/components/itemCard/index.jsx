@@ -2,6 +2,7 @@ import React from 'react';
 import {Card} from "antd";
 import './style.css';
 import {ShoppingCart} from "@phosphor-icons/react";
+import {formatToMonetary} from "../../services/toMonetary";
 
 function ItemCard({id, title, price, salePrice, hasOffer, imageLink}) {
     return (
@@ -20,15 +21,15 @@ function ItemCard({id, title, price, salePrice, hasOffer, imageLink}) {
                 { hasOffer ? (
                     <>
                         <p className='card-original-price'>
-                            {price}
+                            {formatToMonetary(price)}
                         </p>
                         <p className='card-price'>
-                            {salePrice}
+                            {formatToMonetary(salePrice)}
                         </p>
                     </>
                 ) : (
                     <p className='card-price'>
-                        {price}
+                        {formatToMonetary(price)}
                     </p>
                 )}
                 <div className='card-button'>

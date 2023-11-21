@@ -1,17 +1,26 @@
 import React, {useState, useEffect} from 'react';
-import {storeItems} from "../../data/storeItems/items";
 import "./style.css";
 import {useParams} from "react-router-dom";
 import {ShoppingCart} from "@phosphor-icons/react";
+import {ApiInstance} from "../../services/api";
+import {formatToMonetary} from "../../services/toMonetary";
 
 function ProductPage() {
     const {id} = useParams();
     const [product, setProduct] = useState(null);
 
     useEffect(() => {
-        const foundProduct = storeItems.find(item => item.id === Number(id));
-        setProduct(foundProduct);
+        fetchProduct();
     }, [id]);
+
+    const fetchProduct = async () => {
+        try {
+            const response = await ApiInstance.get(`/Product/${id}`);
+            setProduct(response);
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
     return (
         <div className="product-container">
@@ -27,10 +36,10 @@ function ProductPage() {
                         <div className="product-description">
                             {product?.hasOffer ? (
                                 <>
-                                    <p style={{textDecoration: "line-through"}}>{product?.price}</p>
-                                    <h2>{product?.salePrice}</h2>
+                                    <p style={{textDecoration: "line-through"}}>{formatToMonetary(product?.price)}</p>
+                                    <h2>{formatToMonetary(product?.salePrice)}</h2>
                                 </>
-                            ) : (<h2>{product?.price}</h2>)}
+                            ) : (<h2>{formatToMonetary(product?.price)}</h2>)}
                         </div>
                         <div className="purchase-button">
                             <button><ShoppingCart/>  Comprar</button>
