@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import {Dropdown, Input, Space, Badge} from "antd";
+import {Dropdown, Space, Badge} from "antd";
 import {
     Heart,
     ShoppingCart,

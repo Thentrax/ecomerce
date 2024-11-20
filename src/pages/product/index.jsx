@@ -1,3 +1,4 @@
+// eslint-disable-next-line react-hooks/exhaustive-deps
 import React, {useState, useEffect} from 'react';
 import "./style.css";
 import {useParams} from "react-router-dom";
