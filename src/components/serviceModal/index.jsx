@@ -18,7 +18,7 @@ function ServiceModal({isOpen, setIsOpen, action, selectedService, fetchServices
         } else {
             clearFields();
         }
-    }, [isOpen]);
+    }, [isOpen, action, fillFields, clearFields]);
     const fillFields = () => {
         setTitle(selectedService.title);
         setPrice(selectedService.price);

@@ -20,7 +20,7 @@ function ProductModal({isOpen, setIsOpen, action, selectedProduct, fetchProducts
         } else {
             clearFields();
         }
-    }, [isOpen]);
+    }, [isOpen, action, fillFields, clearFields]);
     const fillFields = () => {
         setTitle(selectedProduct.title);
         setPrice(selectedProduct.price);
