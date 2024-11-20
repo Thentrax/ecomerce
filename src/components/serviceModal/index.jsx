@@ -1,4 +1,3 @@
-// eslint-disable-next-line react-hooks/exhaustive-deps
 import React, {useState, useEffect} from 'react';
 import {Col, Input, message, Modal, Row, Select} from "antd";
 import {ApiInstance} from "../../services/api";
@@ -18,7 +17,8 @@ function ServiceModal({isOpen, setIsOpen, action, selectedService, fetchServices
         } else {
             clearFields();
         }
-    }, [isOpen, action, fillFields, clearFields]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isOpen]);
     const fillFields = () => {
         setTitle(selectedService.title);
         setPrice(selectedService.price);
