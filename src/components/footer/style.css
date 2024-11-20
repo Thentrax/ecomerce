@@ -111,7 +111,7 @@
 .footer-item-column-child {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 4px;
     font-size: 14px;
     font-weight: 300;
